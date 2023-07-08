@@ -1,0 +1,162 @@
+<!-- index.html -->
+<html>
+<head>
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            text-align: center;
+            background-color: #F7F7F7;
+            background-image: url('landscape.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 10px;
+        }
+        
+        h1 {
+            font-size: 48px;
+            color: #000;
+            margin-bottom: 40px;
+        }
+        
+        form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        label {
+            display: block;
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 20px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: #fff;
+            font-size: 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        p {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+        
+        .project-info {
+            margin-top: 30px;
+            font-size: 18px;
+            color: #555;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: #000;">Credit Card Default Prediction</h1>
+        <form action="/predictdata" method="post">
+            <label for="LIMIT_BAL">LIMIT_BAL:</label>
+            <input type="number" name="LIMIT_BAL" id="LIMIT_BAL" step="0.01" required>
+
+            <label for="SEX">SEX:</label>
+            <input type="number" name="SEX" id="SEX" step="0.01" required>
+
+            <label for="EDUCATION">EDUCATION:</label>
+            <input type="number" name="EDUCATION" id="EDUCATION" step="0.01" required>
+
+            <label for="MARRIAGE">MARRIAGE:</label>
+            <input type="number" name="MARRIAGE" id="MARRIAGE" step="0.01" required>
+
+            <label for="AGE">AGE:</label>
+            <input type="number" name="AGE" id="AGE" required>
+
+            <label for="PAY_0">PAY_0:</label>
+            <input type="number" name="PAY_0" id="PAY_0" step="0.01" required>
+
+            <label for="PAY_2">PAY_2:</label>
+            <input type="number" name="PAY_2" id="PAY_2" step="0.01" required>
+
+            <label for="PAY_3">PAY_3:</label>
+            <input type="number" name="PAY_3" id="PAY_3" step="0.01" required>
+
+            <label for="PAY_4">PAY_4:</label>
+            <input type="number" name="PAY_4" id="PAY_4" step="0.01" required>
+
+            <label for="PAY_5">PAY_5:</label>
+            <input type="number" name="PAY_5" id="PAY_5" step="0.01" required>
+
+            <label for="PAY_6">PAY_6:</label>
+            <input type="number" name="PAY_6" id="PAY_6" step="0.01" required>
+
+            <label for="BILL_AMT1">BILL_AMT1:</label>
+            <input type="number" name="BILL_AMT1" id="BILL_AMT1" step="0.01" required>
+
+            <label for="BILL_AMT2">BILL_AMT2:</label>
+            <input type="number" name="BILL_AMT2" id="BILL_AMT2" step="0.01" required>
+
+            <label for="BILL_AMT3">BILL_AMT3:</label>
+            <input type="number" name="BILL_AMT3" id="BILL_AMT3" step="0.01" required>
+
+            <label for="BILL_AMT4">BILL_AMT4:</label>
+            <input type="number" name="BILL_AMT4" id="BILL_AMT4" step="0.01" required>
+
+            <label for="BILL_AMT5">BILL_AMT5:</label>
+            <input type="number" name="BILL_AMT5" id="BILL_AMT5" step="0.01" required>
+
+            <label for="BILL_AMT6">BILL_AMT6:</label>
+            <input type="number" name="BILL_AMT6" id="BILL_AMT6" step="0.01" required>
+
+            <label for="PAY_AMT1">PAY_AMT1:</label>
+            <input type="number" name="PAY_AMT1" id="PAY_AMT1" step="0.01" required>
+
+            <label for="PAY_AMT2">PAY_AMT2:</label>
+            <input type="number" name="PAY_AMT2" id="PAY_AMT2" step="0.01" required>
+
+            <label for="PAY_AMT3">PAY_AMT3:</label>
+            <input type="number" name="PAY_AMT3" id="PAY_AMT3" step="0.01" required>
+
+            <label for="PAY_AMT4">PAY_AMT4:</label>
+            <input type="number" name="PAY_AMT4" id="PAY_AMT4" step="0.01" required>
+
+            <label for="PAY_AMT5">PAY_AMT5:</label>
+            <input type="number" name="PAY_AMT5" id="PAY_AMT5" step="0.01" required>
+
+            <label for="PAY_AMT6">PAY_AMT6:</label>
+            <input type="number" name="PAY_AMT6" id="PAY_AMT6" step="0.01" required>
+
+            <input type="submit" value="Predict">
+        </form>
+        <p>The person is {{results}}</p>
+        <div class="project-info">
+            <p>Project by Milan Kumar Behera</p>
+            <p>Email: milanbeherazyx@gmail.com</p>
+            <p>LinkedIn: milanbeherazyx</p>
+        </div>
+    </div>
+</body>
+</html>
