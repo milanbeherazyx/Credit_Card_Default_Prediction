@@ -21,7 +21,7 @@ class DataIngestion:
     def initiate_data_ingestion(self):
         logging.info("Entered the data ingestion method or component")
         try:
-            df = pd.read_csv(r"/home/milan/Data Science/Project/Credit_Card_Default_Prediction/notebooks/data/UCI_Credit_Card_modified.csv")
+            df = pd.read_csv(r"C:\Users\milan\PPT\Credit_Card_Default_Prediction\notebooks\data\UCI_Credit_Card_modified.csv")
             logging.info('Read the dataset as a DataFrame')
 
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path), exist_ok=True)
