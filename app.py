@@ -4,7 +4,7 @@ from src.pipelines.predict_pipeline import CustomData, PredictPipeline
 application = Flask(__name__)
 app = application
 
-# Route for the home page
+# **Route for the home page**
 @app.route('/')
 def index():
     """
