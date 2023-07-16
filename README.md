@@ -99,7 +99,7 @@ pip install -r requirements.txt
 1. Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/milanbeherazyx/Credit_Card_Default_Prediction.git
 ```
 
 2. Install the dependencies:
@@ -114,7 +114,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
-4. Access the web application in your browser at http://localhost:5000.
+4. Access the web application in your browser at http://localhost:8080.
 
 ## License
 
